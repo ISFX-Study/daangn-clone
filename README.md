@@ -17,6 +17,12 @@
 <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
 <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
 
++ 상세버전
++ SpringBoot 3.2.2
++ java 17
++ react 18
++ MySQL 8.3.0
+
 ## :rabbit2: 프로젝트 세부 일정
 + 기능분석
 + 설계
