@@ -1,12 +1,12 @@
-package com.clone.daangn;
+package com.clone.danngnback;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DaangnApplication {
+public class DanngnBackApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DaangnApplication.class, args);
+		SpringApplication.run(DanngnBackApplication.class, args);
 	}
 }

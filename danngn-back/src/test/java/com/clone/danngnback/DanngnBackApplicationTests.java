@@ -1,10 +1,10 @@
-package com.clone.daangn;
+package com.clone.danngnback;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DaangnApplicationTests {
+class DanngnBackApplicationTests {
 
 	@Test
 	void contextLoads() {

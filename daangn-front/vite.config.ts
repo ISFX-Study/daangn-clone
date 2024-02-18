@@ -8,12 +8,14 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
+          // target 프로젝트 구성에 맞게 포트 변경하면 됨
           target: "http://localhost:8080",
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, ""), //http://localhost:5173/api/test/hello -> http://localhost:8080/test/hello 로 변환해줌
+          // 예) http://localhost:5173/api/test/hello -> http://localhost:8080/test/hello 로 변환해줌
+          rewrite: (path) => path.replace(/^\/api/, ""),
           secure: false,
           ws: true,
       },
     },
-  },
+    },
 })
