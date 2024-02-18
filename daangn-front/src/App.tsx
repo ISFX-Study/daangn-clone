@@ -10,6 +10,7 @@ function App() {
     const url = '/api/test/hello'; 
 
     useEffect(() => {
+        // fetch에 대해서 알아볼것
         fetch(url)
             .then(response => response.text())
             .then(message => {
