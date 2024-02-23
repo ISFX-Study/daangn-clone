@@ -8,18 +8,16 @@ import java.math.BigDecimal;
 @Entity
 @Table(name="TB_PD_PRODUCT")
 @Comment("상품")
-public class PdProduct {
+public class PdProduct extends BaseColumn {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
     @Column(length = 20)
     @Comment("상품번호")
-    private String productCd;   // 상품번호
+    private int productCd;   // 상품번호
 
     @Column(length = 10)
     @Comment("사용자ID")
-    private String userId;      // 사용자ID
+    private int userId;      // 사용자ID
 
     @Column(length = 10)
     @Comment("거래방식")
@@ -51,7 +49,7 @@ public class PdProduct {
 
     @Column(length = 10)
     @Comment("파일순번")
-    private String fileSeq;    // 파일순번
+    private int fileSeq;    // 파일순번
 
     @Column(length = 20)
     @Comment("거래희망장소")
@@ -69,19 +67,115 @@ public class PdProduct {
     @Comment("채팅건수")
     private BigDecimal chatCnt;    // 채팅건수
 
-    @Column(length = 14)
-    @Comment("등록일시")
-    private String createdat;    // 등록일시
+    public int getProductCd() {
+        return productCd;
+    }
 
-    @Column(length = 10)
-    @Comment("등록자")
-    private String createdby;    // 등록자
+    public void setProductCd(int productCd) {
+        this.productCd = productCd;
+    }
 
-    @Column(length = 14)
-    @Comment("수정일시")
-    private String updatedat;    // 수정일시
+    public int getUserId() {
+        return userId;
+    }
 
-    @Column(length = 10)
-    @Comment("수정자")
-    private String updatedby;    // 수정자
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public String getTranType() {
+        return tranType;
+    }
+
+    public void setTranType(String tranType) {
+        this.tranType = tranType;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getCategoryCd() {
+        return categoryCd;
+    }
+
+    public void setCategoryCd(String categoryCd) {
+        this.categoryCd = categoryCd;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getNegoYn() {
+        return negoYn;
+    }
+
+    public void setNegoYn(String negoYn) {
+        this.negoYn = negoYn;
+    }
+
+    public BigDecimal getSellPrice() {
+        return sellPrice;
+    }
+
+    public void setSellPrice(BigDecimal sellPrice) {
+        this.sellPrice = sellPrice;
+    }
+
+    public int getFileSeq() {
+        return fileSeq;
+    }
+
+    public void setFileSeq(int fileSeq) {
+        this.fileSeq = fileSeq;
+    }
+
+    public String getTranHopeSpot() {
+        return tranHopeSpot;
+    }
+
+    public void setTranHopeSpot(String tranHopeSpot) {
+        this.tranHopeSpot = tranHopeSpot;
+    }
+
+    public BigDecimal getLikeCnt() {
+        return likeCnt;
+    }
+
+    public void setLikeCnt(BigDecimal likeCnt) {
+        this.likeCnt = likeCnt;
+    }
+
+    public BigDecimal getSearchCnt() {
+        return searchCnt;
+    }
+
+    public void setSearchCnt(BigDecimal searchCnt) {
+        this.searchCnt = searchCnt;
+    }
+
+    public BigDecimal getChatCnt() {
+        return chatCnt;
+    }
+
+    public void setChatCnt(BigDecimal chatCnt) {
+        this.chatCnt = chatCnt;
+    }
 }

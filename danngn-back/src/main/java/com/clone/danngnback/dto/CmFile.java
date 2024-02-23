@@ -6,14 +6,12 @@ import java.math.BigDecimal;
 @Entity
 @Table(name="TB_CM_FILE")
 @Comment("파일첨부")
-public class CmFile {
+public class CmFile extends BaseColumn {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
     @Column(length = 10)
     @Comment("파일순번")
-    private String fileSeq;   // 파일순번
+    private int fileSeq;   // 파일순번
 
     @Column(length = 300)
     @Comment("파일명")
@@ -35,19 +33,51 @@ public class CmFile {
     @Comment("파일사이즈")
     private BigDecimal fileSiz;    // 파일사이즈
 
-    @Column(length = 14)
-    @Comment("등록일시")
-    private String createdat;    // 등록일시
+    public int getFileSeq() {
+        return fileSeq;
+    }
 
-    @Column(length = 10)
-    @Comment("등록자")
-    private String createdby;    // 등록자
+    public void setFileSeq(int fileSeq) {
+        this.fileSeq = fileSeq;
+    }
 
-    @Column(length = 14)
-    @Comment("수정일시")
-    private String updatedat;    // 수정일시
+    public String getDpNm() {
+        return dpNm;
+    }
 
-    @Column(length = 10)
-    @Comment("수정자")
-    private String updatedby;    // 수정자
+    public void setDpNm(String dpNm) {
+        this.dpNm = dpNm;
+    }
+
+    public String getSaveNm() {
+        return saveNm;
+    }
+
+    public void setSaveNm(String saveNm) {
+        this.saveNm = saveNm;
+    }
+
+    public String getFilePath() {
+        return filePath;
+    }
+
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
+    }
+
+    public String getFileExt() {
+        return fileExt;
+    }
+
+    public void setFileExt(String fileExt) {
+        this.fileExt = fileExt;
+    }
+
+    public BigDecimal getFileSiz() {
+        return fileSiz;
+    }
+
+    public void setFileSiz(BigDecimal fileSiz) {
+        this.fileSiz = fileSiz;
+    }
 }

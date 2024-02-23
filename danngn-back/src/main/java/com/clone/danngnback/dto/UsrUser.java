@@ -8,14 +8,12 @@ import java.math.BigDecimal;
 @Entity
 @Table(name="TB_USR_USER")
 @Comment("회원")
-public class UsrUser {
+public class UsrUser extends BaseColumn {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
     @Column(length = 10)
     @Comment("사용자ID")
-    private String userId;   // 사용자ID
+    private int userId;   // 사용자ID
 
     @Column(length = 30)
     @Comment("사용자명")
@@ -23,7 +21,7 @@ public class UsrUser {
 
     @Column(length = 10)
     @Comment("파일순번")
-    private String fileSeq;    // 파일순번
+    private int fileSeq;    // 파일순번
 
     @Column(length = 11)
     @Comment("휴대폰번호")
@@ -45,19 +43,67 @@ public class UsrUser {
     @Comment("매너점수")
     private BigDecimal mannerScore;    // 매너점수
 
-    @Column(length = 14)
-    @Comment("등록일시")
-    private String createdat;    // 등록일시
+    public int getUserId() {
+        return userId;
+    }
 
-    @Column(length = 10)
-    @Comment("등록자")
-    private String createdby;    // 등록자
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
 
-    @Column(length = 14)
-    @Comment("수정일시")
-    private String updatedat;    // 수정일시
+    public String getUserNm() {
+        return userNm;
+    }
 
-    @Column(length = 10)
-    @Comment("수정자")
-    private String updatedby;    // 수정자
+    public void setUserNm(String userNm) {
+        this.userNm = userNm;
+    }
+
+    public int getFileSeq() {
+        return fileSeq;
+    }
+
+    public void setFileSeq(int fileSeq) {
+        this.fileSeq = fileSeq;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getActiveArea() {
+        return activeArea;
+    }
+
+    public void setActiveArea(String activeArea) {
+        this.activeArea = activeArea;
+    }
+
+    public String getUseYn() {
+        return useYn;
+    }
+
+    public void setUseYn(String useYn) {
+        this.useYn = useYn;
+    }
+
+    public BigDecimal getMannerScore() {
+        return mannerScore;
+    }
+
+    public void setMannerScore(BigDecimal mannerScore) {
+        this.mannerScore = mannerScore;
+    }
 }

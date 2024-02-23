@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 @Entity
 @Table(name="TB_USR_LIKE_PRODUCT")
 @Comment("회원관심상품")
-public class UsrLikeProduct {
+public class UsrLikeProduct extends BaseColumn {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Comment("관심상품번호")
@@ -16,25 +16,33 @@ public class UsrLikeProduct {
 
     @Column(length = 10)
     @Comment("사용자ID")
-    private String userId;      // 사용자ID
+    private int userId;      // 사용자ID
 
     @Column(length = 20)
     @Comment("상품번호")
-    private String productCd;   // 상품번호
+    private int productCd;   // 상품번호
 
-    @Column(length = 14)
-    @Comment("등록일시")
-    private String createdat;    // 등록일시
+    public long getLikeProductNo() {
+        return likeProductNo;
+    }
 
-    @Column(length = 10)
-    @Comment("등록자")
-    private String createdby;    // 등록자
+    public void setLikeProductNo(long likeProductNo) {
+        this.likeProductNo = likeProductNo;
+    }
 
-    @Column(length = 14)
-    @Comment("수정일시")
-    private String updatedat;    // 수정일시
+    public int getUserId() {
+        return userId;
+    }
 
-    @Column(length = 10)
-    @Comment("수정자")
-    private String updatedby;    // 수정자
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public int getProductCd() {
+        return productCd;
+    }
+
+    public void setProductCd(int productCd) {
+        this.productCd = productCd;
+    }
 }

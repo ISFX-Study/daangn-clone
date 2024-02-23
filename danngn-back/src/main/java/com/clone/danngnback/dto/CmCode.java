@@ -8,14 +8,12 @@ import java.math.BigDecimal;
 @Entity
 @Table(name="TB_CM_CODE")
 @Comment("공통코드")
-public class CmCode {
+public class CmCode extends BaseColumn {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
     @Column(length = 5)
     @Comment("코드번호")
-    private String cdNo;   // 코드번호
+    private int cdNo;   // 코드번호
 
     @Column(length = 20)
     @Comment("코드명")
@@ -41,19 +39,59 @@ public class CmCode {
     @Comment("사용여부")
     private String useYn;    // 사용여부
 
-    @Column(length = 14)
-    @Comment("등록일시")
-    private String createdat;    // 등록일시
+    public int getCdNo() {
+        return cdNo;
+    }
 
-    @Column(length = 10)
-    @Comment("등록자")
-    private String createdby;    // 등록자
+    public void setCdNo(int cdNo) {
+        this.cdNo = cdNo;
+    }
 
-    @Column(length = 14)
-    @Comment("수정일시")
-    private String updatedat;    // 수정일시
+    public String getCdNm() {
+        return cdNm;
+    }
 
-    @Column(length = 10)
-    @Comment("수정자")
-    private String updatedby;    // 수정자
+    public void setCdNm(String cdNm) {
+        this.cdNm = cdNm;
+    }
+
+    public String getCdDtlNo() {
+        return cdDtlNo;
+    }
+
+    public void setCdDtlNo(String cdDtlNo) {
+        this.cdDtlNo = cdDtlNo;
+    }
+
+    public String getCdDtlNm() {
+        return cdDtlNm;
+    }
+
+    public void setCdDtlNm(String cdDtlNm) {
+        this.cdDtlNm = cdDtlNm;
+    }
+
+    public String getCdDtlDesc() {
+        return cdDtlDesc;
+    }
+
+    public void setCdDtlDesc(String cdDtlDesc) {
+        this.cdDtlDesc = cdDtlDesc;
+    }
+
+    public BigDecimal getDispPrir() {
+        return dispPrir;
+    }
+
+    public void setDispPrir(BigDecimal dispPrir) {
+        this.dispPrir = dispPrir;
+    }
+
+    public String getUseYn() {
+        return useYn;
+    }
+
+    public void setUseYn(String useYn) {
+        this.useYn = useYn;
+    }
 }
