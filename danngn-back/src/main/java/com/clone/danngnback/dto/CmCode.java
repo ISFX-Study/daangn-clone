@@ -10,10 +10,10 @@ import java.math.BigDecimal;
 @Comment("공통코드")
 public class CmCode extends BaseColumn {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(length = 5)
     @Comment("코드번호")
-    private int cdNo;   // 코드번호
+    private String cdNo;   // 코드번호
 
     @Column(length = 20)
     @Comment("코드명")
@@ -39,11 +39,11 @@ public class CmCode extends BaseColumn {
     @Comment("사용여부")
     private String useYn;    // 사용여부
 
-    public int getCdNo() {
+    public String getCdNo() {
         return cdNo;
     }
 
-    public void setCdNo(int cdNo) {
+    public void setCdNo(String cdNo) {
         this.cdNo = cdNo;
     }
 

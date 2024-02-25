@@ -10,10 +10,10 @@ import java.math.BigDecimal;
 @Comment("회원")
 public class UsrUser extends BaseColumn {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(length = 10)
     @Comment("사용자ID")
-    private int userId;   // 사용자ID
+    private String userId;   // 사용자ID
 
     @Column(length = 30)
     @Comment("사용자명")
@@ -43,11 +43,11 @@ public class UsrUser extends BaseColumn {
     @Comment("매너점수")
     private BigDecimal mannerScore;    // 매너점수
 
-    public int getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 

@@ -10,10 +10,10 @@ import java.math.BigDecimal;
 @Comment("상품")
 public class PdProduct extends BaseColumn {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+   // @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(length = 20)
     @Comment("상품번호")
-    private int productCd;   // 상품번호
+    private String productCd;   // 상품번호
 
     @Column(length = 10)
     @Comment("사용자ID")
@@ -67,11 +67,11 @@ public class PdProduct extends BaseColumn {
     @Comment("채팅건수")
     private BigDecimal chatCnt;    // 채팅건수
 
-    public int getProductCd() {
+    public String getProductCd() {
         return productCd;
     }
 
-    public void setProductCd(int productCd) {
+    public void setProductCd(String productCd) {
         this.productCd = productCd;
     }
 

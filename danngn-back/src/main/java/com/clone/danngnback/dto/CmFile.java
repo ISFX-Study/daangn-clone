@@ -8,10 +8,10 @@ import java.math.BigDecimal;
 @Comment("파일첨부")
 public class CmFile extends BaseColumn {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(length = 10)
     @Comment("파일순번")
-    private int fileSeq;   // 파일순번
+    private String fileSeq;   // 파일순번
 
     @Column(length = 300)
     @Comment("파일명")
@@ -33,11 +33,11 @@ public class CmFile extends BaseColumn {
     @Comment("파일사이즈")
     private BigDecimal fileSiz;    // 파일사이즈
 
-    public int getFileSeq() {
+    public String getFileSeq() {
         return fileSeq;
     }
 
-    public void setFileSeq(int fileSeq) {
+    public void setFileSeq(String fileSeq) {
         this.fileSeq = fileSeq;
     }
 
