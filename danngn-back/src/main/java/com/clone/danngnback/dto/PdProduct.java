@@ -10,7 +10,6 @@ import java.math.BigDecimal;
 @Comment("상품")
 public class PdProduct extends BaseColumn {
     @Id
-   // @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(length = 20)
     @Comment("상품번호")
     private String productCd;   // 상품번호

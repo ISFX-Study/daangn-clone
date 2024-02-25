@@ -10,7 +10,6 @@ import java.math.BigDecimal;
 @Comment("공통코드")
 public class CmCode extends BaseColumn {
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(length = 5)
     @Comment("코드번호")
     private String cdNo;   // 코드번호

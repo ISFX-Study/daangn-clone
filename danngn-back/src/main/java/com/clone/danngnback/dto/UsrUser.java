@@ -10,7 +10,6 @@ import java.math.BigDecimal;
 @Comment("회원")
 public class UsrUser extends BaseColumn {
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(length = 10)
     @Comment("사용자ID")
     private String userId;   // 사용자ID
