@@ -16,7 +16,7 @@ public class UsrLikeProduct extends BaseColumn {
 
     @Column(length = 10)
     @Comment("사용자ID")
-    private int userId;      // 사용자ID
+    private String userId;      // 사용자ID
 
     @Column(length = 20)
     @Comment("상품번호")
@@ -30,11 +30,11 @@ public class UsrLikeProduct extends BaseColumn {
         this.likeProductNo = likeProductNo;
     }
 
-    public int getUserId() {
+    public String  getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
