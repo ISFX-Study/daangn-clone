@@ -1,5 +1,5 @@
 /**
- * 당근 클론코딩 화면 layout
+ * 당근 클론코딩 메인 화면
  * @date 2024.03.17
  * @author pej
  * @description antd Layout 컴포넌트 이용
@@ -9,16 +9,16 @@ React import
 리액트(버전 16 이하)을 사용하는 경우에는 import React from 'react'; 구문이 있어야 JSX를 사용 할 수 있음
 */
 // import React from 'react';
+/* react router 이용  */
+/* React Router v6에서는 useHistory 대신에 useNavigate Hook을 사용하여 페이지 이동을 처리해야함. */
+import { useNavigate } from 'react-router-dom';
+
 /* Ant Design 라이브러리에서 컴포넌트 import  */
 import { Layout, theme, Flex, Button } from 'antd';
 import { WechatFilled, NotificationFilled, QuestionCircleFilled, AppleFilled, AndroidFilled } from '@ant-design/icons';
-import { Link } from 'react-router-dom';
+import DaangnHeader from '../components/DaangnHeader';
+import DaangnFooter from '../components/DaangnFooter';
 
-import DaangnHeader from './DaangnHeader';
-import DaangeFooter from './DaangnFooter';
-
-
-//import componetStyle from './assets/css/component.css';
 const { Content } = Layout;
 
 /* 컴포넌트를 정의. 함수 컴포넌트 형식으로 작성되었고, React.FC를 사용하여 컴포넌트의 타입을 지정 */
@@ -27,6 +27,39 @@ const daangnLayout: React.FC = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+
+  // Hook은 함수 컴포넌트 내부나 다른 Hook 내부에서만 호출해야함.
+  const navigate = useNavigate();
+
+  /**
+   * 인기매물 버튼 클릭 이벤트
+   * @date 2024.03.17
+   * @author pej
+   */
+  const onClickProduct = () => {
+    // 중고거래 화면으로 이동
+    navigate('/productList');
+  };
+
+  /**
+   * 알바 버튼 클릭 이벤트
+   * @date 2024.03.17
+   * @author pej
+   */
+  const onClickPartTime = () => {
+    // 알바 화면으로 이동
+    navigate('/partTimeList');
+  };
+
+  /**
+   * 동네업체 버튼 클릭 이벤트
+   * @date 2024.03.17
+   * @author pej
+   */
+  const onClickCompany = () => {
+    // 동네업체 화면으로 이동
+    navigate('/companyList');
+  };
 
   return (
     <Layout>
@@ -68,8 +101,16 @@ const daangnLayout: React.FC = () => {
               <p className='service-title'>중고거래</p>
               <h1 className='service-big-title'>믿을만한 이웃 간 중고거래</h1>
               <p className='service-desc'>동네 주민들과 가깝고 따뜻한 거래를 <br/>지금 경험해보세요.</p>
-              <Button type="primary" className='btn-daangn' style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}>인기매물 보기</Button>
-              <Button type="primary" className='btn-daangn' style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}>믿을수 있는 중고거래</Button>
+              <Button type="primary" className='btn-daangn' 
+                style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }} 
+                onClick={onClickProduct}>
+                인기매물 보기
+              </Button>
+              <Button type="primary" className='btn-daangn' 
+                style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}
+                onClick={onClickProduct}>
+                믿을수 있는 중고거래
+              </Button>
             </div>
           </Flex>
           { /* 동네생활 */ }
@@ -117,7 +158,12 @@ const daangnLayout: React.FC = () => {
               <p className='service-title'>알바</p>
               <h1 className='service-big-title'>걸어서 10분!<br/> 동네 알바 구하기</h1>
               <p className='service-desc'>당근하듯 쉽고, 편하게 <br/>당근 알바로 동네 알바를 구할 수 있어요.</p>
-              <Button type="primary" className='btn-daangn' style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}>내 근처 알바 보기</Button>
+              <Button type="primary" 
+                className='btn-daangn' 
+                style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}
+                onClick={onClickPartTime}>
+                내 근처 알바 보기
+              </Button>
             </div> 
           </Flex>
           { /* 동네업체 */ }
@@ -126,7 +172,11 @@ const daangnLayout: React.FC = () => {
               <p className='service-title'>동네업체</p>
               <h1 className='service-big-title'> 내 근처에서 찾는<br/> 동네업체</h1>
               <p className='service-desc'>이웃들의 추천 후기를 확인하고 <br/>동네 곳곳의 업체들을 찾을 수 있어요.</p>
-              <Button type="primary" className='btn-daangn' style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}>당근 동네업체 보기</Button>
+              <Button type="primary" className='btn-daangn' 
+                style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}
+                onClick={onClickCompany}>
+                당근 동네업체 보기
+              </Button>
             </div>
             <div>
               <img className='service-img' 

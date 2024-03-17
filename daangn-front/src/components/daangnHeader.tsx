@@ -5,7 +5,6 @@
  * @description antd Layout 컴포넌트 이용
  */
 import { Flex, Layout, Menu } from 'antd';
-import viteLogo from '/vite.svg';
 
 const { Header } = Layout;
 
@@ -24,7 +23,9 @@ const daangnHeader: React.FC = () => {
             <Flex className='header-area'>
                 <div className="header-logo" >
                     <a href="https://vitejs.dev" target="_blank">
-                        <img src={viteLogo} className="logo" alt="Vite logo" />
+                        <img src="https://png.pngtree.com/png-clipart/20220117/original/pngtree-carrot-png-image_7148643.png" 
+                             className="logo" 
+                             alt="당근" />
                     </a>
                 </div>
                 <Menu
