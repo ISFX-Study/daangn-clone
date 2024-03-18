@@ -47,7 +47,8 @@
 .btn-daangn {
   height: 56px;
   margin-right: 9px;
-  background-color: var(--primary-color);  /* 배경색 변경 */
+  /* 배경색 변경 */
+  background-color: var(--primary-color); 
   font-size: 18px;
   font-weight: bold;
 }

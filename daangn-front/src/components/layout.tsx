@@ -10,22 +10,18 @@ React import
 */
 // import React from 'react';
 /* Ant Design 라이브러리에서 컴포넌트 import  */
-import { Layout, theme, Flex, Button } from 'antd';
+import { Layout, theme, Flex, Space, Button } from 'antd';
 import { WechatFilled, NotificationFilled, QuestionCircleFilled, AppleFilled, AndroidFilled } from '@ant-design/icons';
-import { Link } from 'react-router-dom';
-
 import DaangnHeader from './DaangnHeader';
-import DaangeFooter from './DaangnFooter';
+import DaangnFooter from './DaangnFooter';
 
-
-//import componetStyle from './assets/css/component.css';
 const { Content } = Layout;
 
 /* 컴포넌트를 정의. 함수 컴포넌트 형식으로 작성되었고, React.FC를 사용하여 컴포넌트의 타입을 지정 */
 const daangnLayout: React.FC = () => {
   // React.FC : React 함수 컴포넌트의 타입을 정의시 TypeScript에서 사용되는 타입
   const {
-    token: { colorBgContainer, borderRadiusLG },
+    token: { colorBgContainer, borderRadiusLG},
   } = theme.useToken();
 
   return (
@@ -46,8 +42,10 @@ const daangnLayout: React.FC = () => {
             <div className='service-area'>
               <h1 className='main-title'>당신 근처의<br />지역 생활 커뮤니티</h1>
               <p className='service-desc'>동네라서 가능한 모든 것<br />당근에서 가까운 이웃과 함께해요.</p>
-              <Button type='primary' icon={ <AndroidFilled /> } className='btn-daangn' style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}>Google Play</Button>
-              <Button type='primary' icon={ <AppleFilled /> } className='btn-daangn' style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}>App Store</Button>
+              <Space>
+                <Button type='primary' icon={ <AndroidFilled /> } className='btn-daangn' style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}>Google Play</Button>
+                <Button type='primary' icon={ <AppleFilled /> } className='btn-daangn' style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}>App Store</Button>
+              </Space>
             </div>
             <div>
               <img className='service-img' 
@@ -68,8 +66,10 @@ const daangnLayout: React.FC = () => {
               <p className='service-title'>중고거래</p>
               <h1 className='service-big-title'>믿을만한 이웃 간 중고거래</h1>
               <p className='service-desc'>동네 주민들과 가깝고 따뜻한 거래를 <br/>지금 경험해보세요.</p>
-              <Button type="primary" className='btn-daangn' style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}>인기매물 보기</Button>
-              <Button type="primary" className='btn-daangn' style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}>믿을수 있는 중고거래</Button>
+              <Space>
+                <Button type="primary" className='btn-daangn' style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}>인기매물 보기</Button>
+                <Button type="primary" className='btn-daangn' style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}>믿을수 있는 중고거래</Button>
+              </Space>
             </div>
           </Flex>
           { /* 동네생활 */ }
@@ -117,7 +117,9 @@ const daangnLayout: React.FC = () => {
               <p className='service-title'>알바</p>
               <h1 className='service-big-title'>걸어서 10분!<br/> 동네 알바 구하기</h1>
               <p className='service-desc'>당근하듯 쉽고, 편하게 <br/>당근 알바로 동네 알바를 구할 수 있어요.</p>
-              <Button type="primary" className='btn-daangn' style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}>내 근처 알바 보기</Button>
+              <Button type="primary" className='btn-daangn' style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}>
+                내 근처 알바 보기
+              </Button>
             </div> 
           </Flex>
           { /* 동네업체 */ }
@@ -126,7 +128,9 @@ const daangnLayout: React.FC = () => {
               <p className='service-title'>동네업체</p>
               <h1 className='service-big-title'> 내 근처에서 찾는<br/> 동네업체</h1>
               <p className='service-desc'>이웃들의 추천 후기를 확인하고 <br/>동네 곳곳의 업체들을 찾을 수 있어요.</p>
-              <Button type="primary" className='btn-daangn' style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}>당근 동네업체 보기</Button>
+              <Button type="primary" className='btn-daangn' style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}>
+                당근 동네업체 보기
+              </Button>
             </div>
             <div>
               <img className='service-img' 
