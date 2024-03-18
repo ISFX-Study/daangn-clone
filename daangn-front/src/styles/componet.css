@@ -1,129 +1,132 @@
+@import url('../App.css');
+
 /* Layout css */
 .header-wrap {
-    position: fixed;
-    width: 100%;
-    z-index: 10000;
-    background-color: #FFFFFF;
-    display: 'flex';
+position: fixed;
+width: 100%;
+z-index: 10000;
+background-color: #FFFFFF;
+display: 'flex';
 }
 .header-area {
-    margin: 0 auto;
-    padding: 0 40px;
-    width: 1160px;
-    height: 64px;
+margin: 0 auto;
+padding: 0 40px;
+width: 1160px;
+height: 64px;
 }
 .header-logo {
-    display: flex;
-    justify-content: center; /* 수평 가운데 정렬 */
-    align-items: center; /* 수직 가운데 정렬 */
+display: flex;
+justify-content: center; /* 수평 가운데 정렬 */
+align-items: center; /* 수직 가운데 정렬 */
 }
 
 .main-title {
-    font-size: 54px;
-    font-weight: 700;
-    line-height: 73px;
-    padding-top: 200px;
-    margin-bottom: 3.2rem;
+font-size: 54px;
+font-weight: 700;
+line-height: 73px;
+padding-top: 200px;
+margin-bottom: 3.2rem;
 }
 .icon-daangn {
-    font-size: 43px;
-    color: var(--primary-color);
+font-size: 43px;
+color: var(--primary-color);
 }
 .btn-daangn {
-    height: 56px;
-    margin-right: 9px;
-    background-color: var(--primary-color);  /* 배경색 변경 */
-    font-size: 18px;
-    font-weight: bold;
+height: 56px;
+margin-right: 9px;
+/* 배경색 변경 */
+background-color: var(--primary-color); 
+font-size: 18px;
+font-weight: bold;
 }
 
 .service-area {
-    text-align: left;
+text-align: left;
 }
 .service-img {
-    width: 655px;
-    height: 750px;
+width: 655px;
+height: 750px;
 }
 .service-title {
-    font-weight: 700;
-    font-size: 18px;
-    color: var(--primary-color);
-    margin-bottom: 10px;
+font-weight: 700;
+font-size: 18px;
+color: var(--primary-color);
+margin-bottom: 10px;
 }
 .service-big-title {
-    font-size: 42px;
-    line-height: 57px;
-    margin-bottom: 10px;
+font-size: 42px;
+line-height: 57px;
+margin-bottom: 10px;
 }
 .service-desc {
-    font-weight: 400;
-    font-size: 20px;
-    color: #7C7C7C;
-    line-height: 30px;
+font-weight: 400;
+font-size: 20px;
+color: #7C7C7C;
+line-height: 30px;
 }
 .service-desc-title {
-    font-size: 1.4rem;
-    line-height: 1.5;
+font-size: 1.4rem;
+line-height: 1.5;
 }
 .service-desc-item {
-    font-weight: 400;
-    font-size: 13px;
-    color: #7C7C7C;
-    line-height: 17px;
+font-weight: 400;
+font-size: 13px;
+color: #7C7C7C;
+line-height: 17px;
 }
 
 .footer-wrap2 {
-    display: flex;
-    padding: 48px 40px 56px;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 20px;
-    letter-spacing: -0.2px;
-    color:#868B94;
-    width: 1160px;
-    margin: 0px auto;
+display: flex;
+padding: 48px 40px 56px;
+font-weight: 500;
+font-size: 13px;
+line-height: 20px;
+letter-spacing: -0.2px;
+color:#868B94;
+width: 1160px;
+margin: 0px auto;
 }
 .footer-wrap {
-    background-color: #FFFFFF;
-    padding: 0 48px;
+background-color: #FFFFFF;
+padding: 0 48px;
 }
 .footer-menu {
-    height: 64px;
-    margin: 0 8px; /* 메뉴 사이의 가로 간격 조절 */
-    font-weight: bold;
-    color: #868B94;
+height: 64px;
+margin: 0 8px; /* 메뉴 사이의 가로 간격 조절 */
+font-weight: bold;
+color: #868B94;
 }
 .footer-menu > a {
-    color: inherit;
+color: inherit;
 }
 .footer-area1 {
-    padding-bottom: 10px;
-    line-height: 1.5;
-    font-size: 15px;
+padding-bottom: 10px;
+line-height: 1.5;
+font-size: 15px;
 }
 .footer-area2 {
-    padding-bottom: 20px;
-    line-height: 0.4;
-    color: #868B94;
-    font-size: 13px;
+padding-bottom: 20px;
+line-height: 0.4;
+color: #868B94;
+font-size: 13px;
 }
 .footer-area3 {
-    padding-bottom: 20px;
-    line-height: 1.5;
-    color: #868B94;
-    font-size: 13px;
+padding-bottom: 20px;
+line-height: 1.5;
+color: #868B94;
+font-size: 13px;
 }
 .footer-area4 {
-    padding-bottom: 40px;
-    line-height: 1.5;
-    color: #868B94;
-    font-size: 13px;
+padding-bottom: 40px;
+line-height: 1.5;
+color: #868B94;
+font-size: 13px;
 }
 .footer-area4 > div > a {
-    color: inherit;
+color: inherit;
 }
 .footer-item-title {
-    font-weight: bold;
-    color: #868B94;
-    padding-right: 3px;
+font-weight: bold;
+color: #868B94;
+padding-right: 3px;
 }
