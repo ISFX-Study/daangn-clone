@@ -42,7 +42,7 @@ const DaangnLayout: React.FC<DaangnLayoutProps> = ({ children }) => {
               // groupTitleFontSize: 18, // 2024.03.23 : 동작 안함 속성 확인 필요
               // horizontalItemSelectedColor: 'var(--primary-color)',    // 마우스 오버시 메뉴 밑줄 색상
               itemColor: 'var(--black)',    // 메뉴 글자 색상
-              itemHoverColor: 'var(--gray)',  // 마우스 오버시 메뉴 글자 색상
+              // itemHoverColor: 'var(--gray)',  // 마우스 오버시 메뉴 글자 색상
             },
             Button: {
             }

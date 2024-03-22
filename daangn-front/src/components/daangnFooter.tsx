@@ -4,6 +4,7 @@
  * @author pej
  * @description antd Layout 컴포넌트 이용
  */
+import { useNavigate } from 'react-router-dom';
 import { Layout, Flex } from 'antd';
 
 const { Footer } = Layout;
@@ -39,7 +40,35 @@ const footerMenuList4 = [
 /*  컴포넌트를 정의. 함수 컴포넌트 형식으로 작성되었고, React.FC를 사용하여 컴포넌트의 타입을 지정 */
 const DaangnFooter: React.FC = () => {
     // React.FC : React 함수 컴포넌트의 타입을 정의시 TypeScript에서 사용되는 타입
-    // 메뉴 변수
+    const navigate = useNavigate();
+    
+    /**
+    * 메뉴 클릭 이벤트
+    * @date 2024.03.23
+    * @author pej
+    */
+    const onClickMenu = (e:any) => {
+        switch (e) {
+            case 1: // 중고거래
+                navigate('/productList');
+                break;
+            case 2: // 동네업체
+                navigate('/companyList');
+                break;
+            case 3: // 알바
+                navigate('/partTimeList');
+                break;
+            case 4: // 부동산 직거래
+                navigate('/houseList');
+                break;
+            case 5: // 중고차 직거래
+                navigate('/carList');
+                break;
+            default:
+                navigate('/');
+        }
+    };
+
     return (
         <Footer style={{ padding: '0 0'}}>
             <Flex gap="middle" vertical={true} className='footer-wrap'>
@@ -48,7 +77,7 @@ const DaangnFooter: React.FC = () => {
                         {
                             footerMenuList1.map(item => (
                                 <div key={item.key} className='footer-menu'>
-                                {item.key === 0 ? ( <span style={{fontSize: '18px'}}>{item.label}</span>) : ( <a href='#' target="_blank">{item.label}</a>)}
+                                {item.key === 0 ? ( <span style={{fontSize: '18px'}}>{item.label}</span>) : ( <a href='' onClick={() => onClickMenu(item.key)}>{item.label}</a>)}
                                 </div>
                             ))
                         }
