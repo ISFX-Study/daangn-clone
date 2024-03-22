@@ -2,7 +2,11 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 /* css import */
 import './App.css';
+import './styles/layout.css'
 import './styles/componet.css'
+
+/* 컴포넌트 import */
+import DaangnLayout from './components/DaangnLayout';
 
 /* 페이지 불러오기 */
 import Main from './pages/main';
@@ -19,15 +23,17 @@ import Sample from './pages/sample';
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/productList" element={<ProductList />} />
-        <Route path="/companyList" element={<CompanyList />} />
-        <Route path="/partTimeList" element={<PartTimeList />} />
-        <Route path="/houseList" element={<HouseList />} />
-        <Route path="/carList" element={<CarList />} />
-        <Route path="/sample" element={<Sample />} />
-      </Routes>
+      <DaangnLayout>
+        <Routes>
+          <Route path="/" element={<Main />}  />
+          <Route path="/productList" element={<ProductList />} />
+          <Route path="/companyList" element={<CompanyList />} />
+          <Route path="/partTimeList" element={<PartTimeList />} />
+          <Route path="/houseList" element={<HouseList />} />
+          <Route path="/carList" element={<CarList />} />
+          <Route path="/sample" element={<Sample />} />
+        </Routes>
+      </DaangnLayout>
     </BrowserRouter>
   );
 }

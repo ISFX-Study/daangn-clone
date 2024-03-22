@@ -4,7 +4,7 @@
  * @author pej
  * @description antd Layout 컴포넌트 이용
  */
-import { Layout, Flex} from 'antd';
+import { Layout, Flex } from 'antd';
 
 const { Footer } = Layout;
 
@@ -37,7 +37,7 @@ const footerMenuList4 = [
 ];
 
 /*  컴포넌트를 정의. 함수 컴포넌트 형식으로 작성되었고, React.FC를 사용하여 컴포넌트의 타입을 지정 */
-const daangnFooter: React.FC = () => {
+const DaangnFooter: React.FC = () => {
     // React.FC : React 함수 컴포넌트의 타입을 정의시 TypeScript에서 사용되는 타입
     // 메뉴 변수
     return (
@@ -48,7 +48,7 @@ const daangnFooter: React.FC = () => {
                         {
                             footerMenuList1.map(item => (
                                 <div key={item.key} className='footer-menu'>
-                                   {item.key === 0 ? ( <span style={{fontSize: '18px'}}>{item.label}</span>) : ( <a href='#' target="_blank">{item.label}</a>)}
+                                {item.key === 0 ? ( <span style={{fontSize: '18px'}}>{item.label}</span>) : ( <a href='#' target="_blank">{item.label}</a>)}
                                 </div>
                             ))
                         }
@@ -110,4 +110,4 @@ const daangnFooter: React.FC = () => {
     );
 };
 /* 컴포넌트를 기본으로 내보냅니다. */
-export default daangnFooter;
+export default DaangnFooter;

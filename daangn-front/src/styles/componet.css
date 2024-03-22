@@ -1,26 +1,5 @@
 @import url('../App.css');
 
-/* header start */
-.header-wrap {
-    position: fixed;
-    width: 100%;
-    z-index: 10000;
-    background-color: var(--background-color);
-    display: 'flex';
-}
-.header-area {
-    margin: 0 auto;
-    padding: 0 40px;
-    width: 1160px;
-    height: 64px;
-}
-.header-logo {
-    display: flex;
-    justify-content: center; /* 수평 가운데 정렬 */
-    align-items: center; /* 수직 가운데 정렬 */
-}
-/* header end */
-
 .main-title {
     font-size: 54px;
     font-weight: 700;
@@ -35,7 +14,6 @@
 .btn-daangn {
     height: 56px;
     margin-right: 9px;
-    background-color: var(--primary-color);      /* 배경색 변경 */
     font-size: 18px;
     font-weight: bold;
 }
@@ -49,12 +27,12 @@
 }
 .service-title {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 28px;
     color: var(--primary-color);
     margin-bottom: 10px;
 }
 .service-big-title {
-    font-size: 42px;
+    font-size: 48px;
     line-height: 57px;
     margin-bottom: 10px;
 }
@@ -74,50 +52,3 @@
     color: #7C7C7C;
     line-height: 17px;
 }
-
-/* footer start */
-.footer-wrap {
-    display: flex;
-    padding: 48px 40px 56px;
-    font-weight: 500;
-    font-size: var(--footer-default-font-size);
-    line-height: 20px;
-    letter-spacing: -0.2px;
-    color:var(--footer-font-color);
-    width: 1160px;
-    margin: 0px auto;
-}
-
-.footer-area1 {
-    padding-bottom: 10px;
-    line-height: 1.5;
-    font-size: var(--footer-title-font-size);
-}
-.footer-menu {
-    height: 64px;
-    margin: 0 8px; /* 메뉴 사이의 가로 간격 조절 */
-    font-weight: bold;
-}
-.footer-menu > a {
-    color: inherit;
-}
-
-.footer-area2 {
-    padding-left: 15px;
-    padding-bottom: 20px;
-    line-height: 0.4;
-}
-.footer-item-title {
-    font-weight: bold;
-    padding-right: 3px;
-}
-
-.footer-area3 {
-    padding-left: 15px;
-    padding-bottom: 40px;
-    line-height: 1.5;
-}
-.footer-area3 > div > a {
-    color: inherit;
-}
-/* footer end */

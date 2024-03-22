@@ -1,18 +1,27 @@
-#root {
-  min-height: 100%;
-  text-align: center;
-  /* css 변수 start */
-  --primary-color: #FF6F0F;
-  --padding-container-base: 48px;
-  --background-color: #FFFFFF;
-  --footer-font-color: #868B94;
-  --footer-title-font-size: 15px;
-  --footer-default-font-size: 13px;
-  /* css 변수 end */
+/*
+ * 공통 css 와 css 변수 정의
+ */
+body {
+    padding: 0;
+    margin: 0;
 }
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  display: block;
-  margin: 0 auto;
+
+#root {
+    min-height: 100%;
+    text-align: center;
+    /* css 변수 start */
+    --primary-color: #FF6F0F;
+    --black: #000000;
+    --gray: #868B94;
+    --white: #FFFFFF;
+    --test:#FF6F0F;
+
+    --padding-container-base: 48px;
+     --background-color: #FFFFFF;
+    --header-height: 64px;
+
+    --footer-font-color: #868B94;
+    --footer-title-font-size: 15px;
+    --footer-default-font-size: 13px;
+    /* css 변수 end */
 }

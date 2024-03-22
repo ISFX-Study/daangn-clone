@@ -17,26 +17,34 @@ const menuList = [
     { key: 5, label: '중고차 직거래' }
 ];
 
-const daangnHeader: React.FC = () => {
+const DaangnHeader: React.FC = () => {
+   /**
+    * 로고 클릭 이벤트
+    * @date 2024.03.23
+    * @author pej
+    */
+    const onClickHome = () => {
+        location.reload();
+    };
+
     return (
         <Header className='header-wrap'>
             <Flex className='header-area'>
                 <div className="header-logo" >
-                    <a href="https://vitejs.dev" target="_blank">
+                    <a href="#" onClick={onClickHome}>
                         <img src="https://png.pngtree.com/png-clipart/20220117/original/pngtree-carrot-png-image_7148643.png" 
-                             className="logo" 
-                             alt="당근" />
+                            className="logo" 
+                            alt="당근" />
                     </a>
                 </div>
                 <Menu
-                    theme="light"
                     mode="horizontal"
                     defaultSelectedKeys={['']} // 2번째 메뉴 선택
                     items={menuList}
                     style={{ flex: 1, minWidth: 0, fontSize: '18px', fontWeight: 'bold'}}
                 />
             </Flex>
-      </Header>
+        </Header>
     );
 };
-export default daangnHeader;
+export default DaangnHeader;
