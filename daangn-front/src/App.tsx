@@ -1,8 +1,8 @@
 /* react-ruuter 불러오기 */
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+/* css import */
 import './App.css';
-// 왜 오류지..??
-// import './src/styles/componet.css'
+import './styles/componet.css'
 
 /* 페이지 불러오기 */
 import Main from './pages/main';
@@ -13,7 +13,10 @@ import HouseList from './pages/houseList';  // 부동산직거래
 import CarList from './pages/carList';  // 중고차직거래
 import Sample from './pages/sample';
 
-function App() {
+/**
+ * 해당 함수가 react 컴포넌트라는 것을 타입스크립트로 설정
+ */
+const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>

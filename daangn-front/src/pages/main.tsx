@@ -106,11 +106,6 @@ const daangnLayout: React.FC = () => {
                 onClick={onClickProduct}>
                 인기매물 보기
               </Button>
-              <Button type="primary" className='btn-daangn' 
-                style={{ backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)' }}
-                onClick={onClickProduct}>
-                믿을수 있는 중고거래
-              </Button>
             </div>
           </Flex>
           { /* 동네생활 */ }

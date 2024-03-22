@@ -42,7 +42,7 @@ const daangnFooter: React.FC = () => {
     // 메뉴 변수
     return (
         <Footer style={{ padding: '0 0'}}>
-            <Flex gap="middle" vertical={true} className='footer-wrap2'>
+            <Flex gap="middle" vertical={true} className='footer-wrap'>
                 <Flex gap="230px" justify='center' className='footer-area1'>
                     <Flex vertical={true} align='flex-start'>
                         {
@@ -98,7 +98,7 @@ const daangnFooter: React.FC = () => {
                         <span className='footer-item-title'>고객문의 </span><span>cs@daangnservice.com</span>
                     </div>
                 </Flex>
-                <Flex gap="middle" justify='flex-start' align='flex-start' className='footer-area4'>
+                <Flex gap="middle" justify='flex-start' align='flex-start' className='footer-area3'>
                     <div><a href='https://www.daangn.com/policy/terms' target="_blank">이용약관</a></div>
                     <div><a href='https://privacy.daangn.com/' target="_blank">개인정보처리방침</a></div>
                     <div><a href='https://www.daangn.com/policy/location' target="_blank">위치기반서비스 이용약관</a></div>
