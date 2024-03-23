@@ -13,7 +13,7 @@
 .header-area {
     margin: 0 auto;
     padding: 0 40px;
-    width: 1160px;
+    max-width: 1140px;
     height: var(--header-height);
 }
 .header-logo {
@@ -38,8 +38,8 @@
     line-height: 20px;
     letter-spacing: -0.2px;
     color:var(--footer-font-color);
-    width: 1160px;
     margin: 0 auto;
+    max-width: 900px;
 }
 
 .footer-area1 {
