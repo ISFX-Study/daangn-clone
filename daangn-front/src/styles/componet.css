@@ -4,7 +4,7 @@
     font-size: 54px;
     font-weight: 700;
     line-height: 73px;
-    padding-top: 200px;
+    padding-top: 110px;
     margin-bottom: 3.2rem;
 }
 .icon-daangn {
@@ -20,6 +20,7 @@
 
 .service-area {
     text-align: left;
+    padding-left: 100px;
 }
 .service-img {
     width: 655px;
