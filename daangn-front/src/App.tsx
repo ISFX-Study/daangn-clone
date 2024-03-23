@@ -9,7 +9,7 @@ import './styles/componet.css'
 import DaangnLayout from './components/DaangnLayout';
 
 /* 페이지 불러오기 */
-import Main from './pages/main';
+import Home from './pages/home';
 import ProductList from './pages/productList';  // 중고거래
 import CompanyList from './pages/companyList';  // 동네업체
 import PartTimeList from './pages/partTimeList';  // 알바
@@ -25,7 +25,7 @@ const App: React.FC = () => {
     <BrowserRouter>
       <DaangnLayout>
         <Routes>
-          <Route path="/" element={<Main />}  />
+          <Route path="/" element={<Home />}  />
           <Route path="/productList" element={<ProductList />} />
           <Route path="/companyList" element={<CompanyList />} />
           <Route path="/partTimeList" element={<PartTimeList />} />

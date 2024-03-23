@@ -7,7 +7,7 @@
 import { Flex } from 'antd';
 
 /* 컴포넌트를 정의. 함수 컴포넌트 형식으로 작성되었고, React.FC를 사용하여 컴포넌트의 타입을 지정 */
-const partTimeList: React.FC = () => {
+const PartTimeList: React.FC = () => {
   return (
     <Flex gap='middle' vertical={true} 
       style={{
@@ -31,4 +31,4 @@ const partTimeList: React.FC = () => {
   );
 };
 
-export default partTimeList;
+export default PartTimeList;

@@ -7,7 +7,7 @@
 import { Button, ConfigProvider, Space } from 'antd';
 import { AndroidFilled } from '@ant-design/icons';
 
-const App: React.FC = () => (
+const Sample: React.FC = () => (
   <ConfigProvider
     theme={{
       token: {
@@ -28,4 +28,4 @@ const App: React.FC = () => (
   </ConfigProvider>
 );
 
-export default App;
+export default Sample;

@@ -1,7 +1,7 @@
 /**
  * 공통 함수
  */
-const CommonUtils = {
+const commonUtils = {
     
     /**
      * 테스트
@@ -13,4 +13,4 @@ const CommonUtils = {
         return a + b;
     }
 }
-export default CommonUtils;
+export default commonUtils;

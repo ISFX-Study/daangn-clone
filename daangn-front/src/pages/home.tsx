@@ -17,8 +17,11 @@ import { useNavigate } from 'react-router-dom';
 import { Flex, Button, Space, message } from 'antd';
 import { WechatFilled, NotificationFilled, QuestionCircleFilled, AppleFilled, AndroidFilled } from '@ant-design/icons';
 
+/* ts import */
+import commonUtils from '../utils/commonUtils';
+
 /* 컴포넌트를 정의. 함수 컴포넌트 형식으로 작성되었고, React.FC를 사용하여 컴포넌트의 타입을 지정 */
-const Main: React.FC = () => {
+const Home: React.FC = () => {
   // React.FC : React 함수 컴포넌트의 타입을 정의시 TypeScript에서 사용되는 타입
   // const {
   //   token: { colorBgContainer, borderRadiusLG },
@@ -64,10 +67,11 @@ const Main: React.FC = () => {
    * @author pej
    */
   const onClickApp = () => {
-    messageApi.open({
-      type: 'success',
-      content: '준비중',
-    });
+    // messageApi.open({
+    //   type: 'success',
+    //   content: '준비중',
+    // });
+    alert(commonUtils.add(2, 3));
   };
 
   return (
@@ -190,4 +194,4 @@ const Main: React.FC = () => {
   );
 };
 
-export default Main;
+export default Home;
