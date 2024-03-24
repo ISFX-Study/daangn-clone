@@ -5,6 +5,8 @@
  * @description
  */
 import { Flex, Alert ,Button } from 'antd';
+/* 커스텀 컴포넌트 import */
+import DaangnBanner from '../components/DaangnBanner';
 
 // 테스트 데이터
 const itemList = [
@@ -31,7 +33,8 @@ const CarList: React.FC = () => {
    * @date 2024.03.23
    * @author pej
    */
-  const onClickSellMyCar = () => {
+  const onClickSell = () => {
+    alert('나오니');
     // return (
     //   <Alert
     //     message="Informational Notes"
@@ -44,28 +47,36 @@ const CarList: React.FC = () => {
 
   return (
     <div>
-      <Flex gap="middle" justify='center' align='center' className='content-wrap'>
+      {/* <Flex gap="middle" justify='center' align='center' className='content-wrap'>
         <div className='content-area'>
           <h1 className='content-big-title'> 딜러 수수료 없는<br/>중고차 직거래</h1>
           <p className='content-desc'>딜러 없이 믿고 살 수 있는 중고차, <br/>당근에서 직거래해보세요.</p>
-          <Button type="primary" className='btn-daangn' onClick={onClickSellMyCar}>
+          <Button type="primary" className='btn-daangn' onClick={onClickSell}>
             내 차 판매하기
           </Button>
         </div>
         <div>
           <img 
-            alt="딜러 없이 믿고 살 수 있는 중고차" 
+            alt="딜러 수수료 없는 중고차 직거래" 
             style={{ width: '400px' }}
             src="https://www.daangn.com/_next/static/media/car_hero_3x.f057110b.png"></img>
         </div>
-      </Flex>
+      </Flex> */}
+
+      <DaangnBanner 
+        mainTitle={<span>딜러 수수료 없는<br/>중고차 직거래</span>}
+        subTitle={<span>딜러 없이 믿고 살 수 있는 중고차, <br/>당근에서 직거래해보세요.</span>}
+        buttonText='내 차 판매하기'
+        onClick={onClickSell}
+        imgElement={ <img alt="딜러 수수료 없는 중고차 직거래" style={{ width: '400px' }} src="https://www.daangn.com/_next/static/media/car_hero_3x.f057110b.png"></img>}
+      />
       
       <Flex gap="middle" justify='center' align='center'>
         <div className='list-wrap'>
           <Flex gap="middle" wrap='wrap'>
             {
               itemList.map(item => (
-                <div key={item.no} style={{ textAlign: 'left', }}>
+                <div key={item.no} style={{ textAlign: 'left' }}>
                   <Flex gap='26px'>
                     <div style={{ }}>
                       <img style={{ width: '150px', height: '150px'}}
