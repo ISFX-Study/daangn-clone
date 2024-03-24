@@ -47,22 +47,6 @@ const CarList: React.FC = () => {
 
   return (
     <div>
-      {/* <Flex gap="middle" justify='center' align='center' className='content-wrap'>
-        <div className='content-area'>
-          <h1 className='content-big-title'> 딜러 수수료 없는<br/>중고차 직거래</h1>
-          <p className='content-desc'>딜러 없이 믿고 살 수 있는 중고차, <br/>당근에서 직거래해보세요.</p>
-          <Button type="primary" className='btn-daangn' onClick={onClickSell}>
-            내 차 판매하기
-          </Button>
-        </div>
-        <div>
-          <img 
-            alt="딜러 수수료 없는 중고차 직거래" 
-            style={{ width: '400px' }}
-            src="https://www.daangn.com/_next/static/media/car_hero_3x.f057110b.png"></img>
-        </div>
-      </Flex> */}
-
       <DaangnBanner 
         mainTitle={<span>딜러 수수료 없는<br/>중고차 직거래</span>}
         subTitle={<span>딜러 없이 믿고 살 수 있는 중고차, <br/>당근에서 직거래해보세요.</span>}
@@ -73,6 +57,9 @@ const CarList: React.FC = () => {
       
       <Flex gap="middle" justify='center' align='center'>
         <div className='list-wrap'>
+          <div>
+            <h2  className='list-title'>인기 중고차 직거래</h2>
+          </div>
           <Flex gap="middle" wrap='wrap'>
             {
               itemList.map(item => (

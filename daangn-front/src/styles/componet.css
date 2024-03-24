@@ -78,16 +78,18 @@
 
 /* list start */
 .list-wrap {
-    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     max-width: 48rem;
 }
 .list-title {
-    font-size: 1.3rem;
-    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
 }
 .list-top-text {
     margin-top: 0;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
     white-space: nowrap; /* 글자 줄 바꿈 방지 */
     overflow: hidden; /* 넘치는 부분 숨김 */

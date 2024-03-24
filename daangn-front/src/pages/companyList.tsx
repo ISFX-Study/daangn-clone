@@ -19,7 +19,9 @@ const CompanyList: React.FC = () => {
       
       <Flex gap="middle" justify='center' align='center'>
         <div className='list-wrap'>
-          
+          <div>
+            <h2 className='list-title'>인기 동네 업체</h2>
+          </div>
         </div>
       </Flex>
     </div>

@@ -76,11 +76,11 @@
 }
 /* footer end */
 @media (max-width: 768px) {
-.main-menu {
-    display: none;
-}
+    .main-menu {
+        display: none;
+    }
 
-.main-menu.mobile-menu {
-    display: block;
-}
+    .main-menu.mobile-menu {
+        display: block;
+    }
 }

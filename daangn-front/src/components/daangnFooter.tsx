@@ -71,6 +71,7 @@ const DaangnFooter: React.FC = () => {
 
     return (
         <Footer style={{ padding: '0 0'}}>
+            
             <Flex gap="middle" vertical={true} className='footer-wrap'>
                 <Flex gap="140px" justify='center' className='footer-area1'>
                     <Flex vertical={true} align='flex-start'>

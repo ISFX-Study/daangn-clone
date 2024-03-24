@@ -37,7 +37,8 @@ const DaangnLayout: React.FC<DaangnLayoutProps> = ({ children }) => {
         components: {
             Layout: {
                 headerBg: 'var(--background-color)',  // 헤더영역 배경색
-                footerBg: 'var(--background-color)',  // 푸터영역 배경색
+                bodyBg: 'var(--background-color)',    // content영역 배경색
+                footerBg: 'var(--footer-bg-color)',  // 푸터영역 배경색
                 // headerHeight: , // 헤더영역 높이
             },
             Menu: {

@@ -4,7 +4,7 @@
  * @author pej
  * @description
  */
-import { Flex, Button } from 'antd';
+import { Flex } from 'antd';
 /* 커스텀 컴포넌트 import */
 import DaangnBanner from '../components/DaangnBanner';
 
@@ -31,7 +31,9 @@ const HouseList: React.FC = () => {
       
       <Flex gap="middle" justify='center' align='center'>
         <div className='list-wrap'>
-          
+          <div>
+            <h2  className='list-title'>인기 부동산 직거래</h2>
+          </div>
         </div>
       </Flex>
     </div>

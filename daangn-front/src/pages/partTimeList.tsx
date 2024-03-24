@@ -29,7 +29,9 @@ const PartTimeList: React.FC = () => {
         />
       <Flex gap="middle" justify='center' align='center'>
         <div className='list-wrap'>
-          
+          <div>
+            <h2  className='list-title'>인기 알바</h2>
+          </div>
         </div>
       </Flex>
     </div>

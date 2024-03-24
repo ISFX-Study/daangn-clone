@@ -53,6 +53,9 @@ const ProductList: React.FC = () => {
       
       <Flex gap="middle" justify='center' align='center'>
         <div className='list-wrap'>
+          <div>
+            <h2  className='list-title'>인기 중고거래</h2>
+          </div>
           <Flex gap="middle" wrap='wrap'>
             {
               itemList.map(item => (
