@@ -9,6 +9,7 @@ React import
 리액트(버전 16 이하)을 사용하는 경우에는 import React from 'react'; 구문이 있어야 JSX를 사용 할 수 있음
 */
 // import React from 'react';
+import { useEffect } from 'react';
 /* react router 이용  */
 /* React Router v6에서는 useHistory 대신에 useNavigate Hook을 사용하여 페이지 이동을 처리해야함. */
 import { useNavigate } from 'react-router-dom';
@@ -29,8 +30,8 @@ const Home: React.FC = () => {
 
   // Hook은 함수 컴포넌트 내부나 다른 Hook 내부에서만 호출해야함.
   const navigate = useNavigate();
-  const [ messageApi ] = message.useMessage();
-
+  const [messageApi, contextHolder] = message.useMessage();
+  
   /**
    * 인기매물 버튼 클릭 이벤트
    * @date 2024.03.17
@@ -71,7 +72,10 @@ const Home: React.FC = () => {
     //   type: 'success',
     //   content: '준비중',
     // });
-    alert(commonUtils.add(2, 3));
+    messageApi.info('Hello, Ant Design!');
+    
+    // message.success('버튼이 클릭되었습니다!');
+    // alert(commonUtils.add(2, 3));
   };
 
   return (
@@ -89,6 +93,7 @@ const Home: React.FC = () => {
           <h1 className='main-title'>당신 근처의<br />지역 생활 커뮤니티</h1>
           <p className='service-desc'>동네라서 가능한 모든 것<br />당근에서 가까운 이웃과 함께해요.</p>
           <Space>
+            {contextHolder}
             <Button type='primary' icon={ <AndroidFilled /> } className='btn-daangn' onClick={onClickApp}>
               Google Play
             </Button>

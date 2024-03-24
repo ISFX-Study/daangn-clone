@@ -12,13 +12,15 @@ React import
 import { ReactNode } from 'react';
 /* Ant Design 라이브러리에서 컴포넌트 import  */
 import { ConfigProvider, Layout } from 'antd';
+
+/* 커스텀 컴포넌트 import */
 import DaangnHeader from './DaangnHeader';
 import DaangnFooter from './DaangnFooter';
 
 const { Content } = Layout;
 
 interface DaangnLayoutProps {
-  children: ReactNode; // ReactNode는 모든 종류의 React 요소를 나타내는 타입입니다.
+  children: ReactNode; // ReactNode는 모든 종류의 React 요소를 나타내는 타입
 }
 
 /* 컴포넌트를 정의. 함수 컴포넌트 형식으로 작성되었고, React.FC를 사용하여 컴포넌트의 타입을 지정 */

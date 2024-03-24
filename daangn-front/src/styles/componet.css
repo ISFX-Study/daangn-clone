@@ -53,3 +53,54 @@
     color: #7C7C7C;
     line-height: 17px;
 }
+
+/* content start */
+.content-wrap {
+    background-color: var(--secondary-color);
+    height: 27rem;
+}
+.content-area {
+    text-align: left;
+    /* padding-left: 100px; */
+}
+.content-big-title {
+    font-size: 2rem;
+    line-height: 1.5;
+}
+.content-desc {
+    font-weight: 400;
+    font-size: 1.125rem;
+    color: #7C7C7C;
+    line-height: 1.32;
+}
+/* content end */
+
+/* list start */
+.list-wrap {
+    border: 1px solid red;
+    margin: 0 auto;
+    max-width: 48rem;
+}
+.list-title {
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+.list-top-text {
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    white-space: nowrap; /* 글자 줄 바꿈 방지 */
+    overflow: hidden; /* 넘치는 부분 숨김 */
+    text-overflow: ellipsis; /* 넘치는 부분을 ...으로 대체 */
+    width: 12rem;
+}
+.list-middle-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.list-bottom-text {
+    font-size: 1rem;
+}
+
+/* list end */

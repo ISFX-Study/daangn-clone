@@ -12,13 +12,13 @@ body {
     text-align: center;
     /* css 변수 start */
     --primary-color: #FF6F0F;
+    --secondary-color: #FFE2D2;
     --black: #000000;
     --gray: #868B94;
     --white: #FFFFFF;
     --test:#FF6F0F;
 
     /* --header-bg-color: #001b37; */
-
     --padding-container-base: 48px;
     --background-color: #FFFFFF;
     --header-height: 64px;
