@@ -32,6 +32,11 @@ dependencies {
 	implementation 'com.oracle.database.security:osdt_core'
 	implementation 'com.oracle.database.security:osdt_cert'
 	// 오라클 클라우드 DB사용시 추가해야됨(E)
+
+	// lombok
+	implementation 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
     // auto build
     implementation 'org.springframework.boot:spring-boot-devtools'
 }

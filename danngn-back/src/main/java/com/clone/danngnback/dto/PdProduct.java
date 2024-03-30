@@ -1,6 +1,7 @@
 package com.clone.danngnback.dto;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import org.hibernate.annotations.Comment;
 
 import java.math.BigDecimal;
@@ -8,9 +9,11 @@ import java.math.BigDecimal;
 @Entity
 @Table(name="TB_PD_PRODUCT")
 @Comment("상품")
+@Data
 public class PdProduct extends BaseColumn {
     @Id
     @Column(length = 20)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Comment("상품번호")
     private String productCd;   // 상품번호
 
@@ -65,116 +68,4 @@ public class PdProduct extends BaseColumn {
     @Column(precision = 16)
     @Comment("채팅건수")
     private BigDecimal chatCnt;    // 채팅건수
-
-    public String getProductCd() {
-        return productCd;
-    }
-
-    public void setProductCd(String productCd) {
-        this.productCd = productCd;
-    }
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-
-    public String getTranType() {
-        return tranType;
-    }
-
-    public void setTranType(String tranType) {
-        this.tranType = tranType;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getCategoryCd() {
-        return categoryCd;
-    }
-
-    public void setCategoryCd(String categoryCd) {
-        this.categoryCd = categoryCd;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public String getNegoYn() {
-        return negoYn;
-    }
-
-    public void setNegoYn(String negoYn) {
-        this.negoYn = negoYn;
-    }
-
-    public BigDecimal getSellPrice() {
-        return sellPrice;
-    }
-
-    public void setSellPrice(BigDecimal sellPrice) {
-        this.sellPrice = sellPrice;
-    }
-
-    public int getFileSeq() {
-        return fileSeq;
-    }
-
-    public void setFileSeq(int fileSeq) {
-        this.fileSeq = fileSeq;
-    }
-
-    public String getTranHopeSpot() {
-        return tranHopeSpot;
-    }
-
-    public void setTranHopeSpot(String tranHopeSpot) {
-        this.tranHopeSpot = tranHopeSpot;
-    }
-
-    public BigDecimal getLikeCnt() {
-        return likeCnt;
-    }
-
-    public void setLikeCnt(BigDecimal likeCnt) {
-        this.likeCnt = likeCnt;
-    }
-
-    public BigDecimal getSearchCnt() {
-        return searchCnt;
-    }
-
-    public void setSearchCnt(BigDecimal searchCnt) {
-        this.searchCnt = searchCnt;
-    }
-
-    public BigDecimal getChatCnt() {
-        return chatCnt;
-    }
-
-    public void setChatCnt(BigDecimal chatCnt) {
-        this.chatCnt = chatCnt;
-    }
 }

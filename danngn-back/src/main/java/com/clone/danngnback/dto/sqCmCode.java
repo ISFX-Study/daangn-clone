@@ -4,11 +4,12 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Data;
 import org.hibernate.annotations.Comment;
 
 import java.math.BigDecimal;
 
-@Entity
+//@Entity
 @Table(name="SQ_CM_CODE")
 @Comment("공통코드 시퀀스")
 public class sqCmCode {

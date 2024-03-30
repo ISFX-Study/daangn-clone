@@ -1,6 +1,7 @@
 package com.clone.danngnback.dto;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import org.hibernate.annotations.Comment;
 
 import java.math.BigDecimal;
@@ -8,6 +9,7 @@ import java.math.BigDecimal;
 @Entity
 @Table(name="TB_USR_LIKE_PRODUCT")
 @Comment("회원관심상품")
+@Data
 public class UsrLikeProduct extends BaseColumn {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,28 +23,4 @@ public class UsrLikeProduct extends BaseColumn {
     @Column(length = 20)
     @Comment("상품번호")
     private int productCd;   // 상품번호
-
-    public long getLikeProductNo() {
-        return likeProductNo;
-    }
-
-    public void setLikeProductNo(long likeProductNo) {
-        this.likeProductNo = likeProductNo;
-    }
-
-    public String  getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    public int getProductCd() {
-        return productCd;
-    }
-
-    public void setProductCd(int productCd) {
-        this.productCd = productCd;
-    }
 }
