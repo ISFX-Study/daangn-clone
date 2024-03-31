@@ -5,7 +5,8 @@
  * @description antd Layout 컴포넌트 이용
  */
 import { useNavigate } from 'react-router-dom';
-import { Layout, Flex } from 'antd';
+import { Layout, Flex, Descriptions } from 'antd';
+import type { DescriptionsProps } from 'antd';
 
 const { Footer } = Layout;
 
@@ -41,6 +42,39 @@ const footerMenuList4 = [
 const DaangnFooter: React.FC = () => {
     // React.FC : React 함수 컴포넌트의 타입을 정의시 TypeScript에서 사용되는 타입
     const navigate = useNavigate();
+
+    const items: DescriptionsProps['items'] = [
+        {
+          key: '1',
+          label: '대표',
+          children: '김용현, 황도연',
+        },
+        {
+          key: '2',
+          label: '사업자번호 ',
+          children: '375-87-00088',
+        },
+        {
+          key: '3',
+          label: '직업정보제공사업 신고번호',
+          children: 'J1200020200016',
+        },
+        {
+          key: '4',
+          label: '주소',
+          children: '서울특별시 구로구 디지털로30길 28, 609호(당근서비스)',
+        },
+        {
+          key: '5',
+          label: '전화',
+          children: '1544-9796',
+        },
+        {
+            key: '6',
+            label: '고객문의',
+            children: 'cs@daangnservice.com',
+        },
+      ];
     
     /**
     * 메뉴 클릭 이벤트
@@ -111,8 +145,9 @@ const DaangnFooter: React.FC = () => {
                         }
                     </Flex>
                 </Flex>
-
+                
                 <Flex gap="middle" vertical={true} align='flex-start' className='footer-area2'>
+                    {/* <Descriptions title="" items={items} colon={false}/> */}
                     <div> 
                         <span className='footer-item-title'>대표</span><span>김용현, 황도연</span> &nbsp;| &nbsp;
                         <span className='footer-item-title'>사업자번호 </span><span>375-87-00088</span>
@@ -127,6 +162,7 @@ const DaangnFooter: React.FC = () => {
                         <span className='footer-item-title'>전화 </span><span>1544-9796</span>&nbsp;| &nbsp;
                         <span className='footer-item-title'>고객문의 </span><span>cs@daangnservice.com</span>
                     </div>
+
                 </Flex>
                 <Flex gap="middle" justify='flex-start' align='flex-start' className='footer-area3'>
                     <div><a href='https://www.daangn.com/policy/terms' target="_blank">이용약관</a></div>

@@ -12,14 +12,13 @@ import java.math.BigDecimal;
 @Data
 public class PdProduct extends BaseColumn {
     @Id
-    @Column(length = 20)
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Comment("상품번호")
-    private String productCd;   // 상품번호
+    private int productCd;   // 상품번호
 
     @Column(length = 10)
-    @Comment("사용자ID")
-    private int userId;      // 사용자ID
+    @Comment("사용자번호")
+    private String userNo;      // 사용자번호
 
     @Column(length = 10)
     @Comment("거래방식")
@@ -33,7 +32,7 @@ public class PdProduct extends BaseColumn {
     @Comment("카테고리코드")
     private String categoryCd; // 카테고리코드
 
-    @Column(length = 20)
+    @Column
     @Comment("제목")
     private String title;    // 제목
 

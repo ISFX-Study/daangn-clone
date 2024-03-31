@@ -4,10 +4,12 @@
  * @author pej
  * @description
  */
-import { Flex, Alert ,Button } from 'antd';
+import { useState, useEffect } from 'react'
+import { Flex } from 'antd';
 /* 커스텀 컴포넌트 import */
 import DaangnBanner from '../components/DaangnBanner';
-
+/* Axios import */
+import axios from 'axios';
 // 테스트 데이터
 const itemList = [
   {no: 1  , title: '다이슨청소기세트', middleText: '10,000원', bottomText:'충북 청주시 서원구 분평동'},
@@ -27,14 +29,38 @@ const itemList = [
 
 /* 컴포넌트를 정의. 함수 컴포넌트 형식으로 작성되었고, React.FC를 사용하여 컴포넌트의 타입을 지정 */
 const CarList: React.FC = () => {
- 
+  const [message, setMessage] = useState("");
  /**
    * 내 차 판매하기 버튼 클릭 이벤트
    * @date 2024.03.23
    * @author pej
    */
   const onClickSell = () => {
-    alert('나오니');
+    try {
+      const url = '/api/test/hello'; 
+      // const url2 = '/api/prd/searchPrdouctList';
+
+      //응답 성공
+      // fetch(url)
+      //     .then(response => response.text())
+      //     .then(message => {
+      //         setMessage(message);
+      // });
+      // alert(message);
+
+      axios.get(url)
+      .then(response => {
+        debugger
+        console.log(response.data); // 서버로부터 받은 데이터 출력
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error); // 에러 핸들링
+      });
+
+    } catch (error) {
+      //응답 실패
+      console.error(error);
+    }
     // return (
     //   <Alert
     //     message="Informational Notes"
@@ -65,7 +91,7 @@ const CarList: React.FC = () => {
               itemList.map(item => (
                 <div key={item.no} style={{ textAlign: 'left' }}>
                   <Flex gap='26px'>
-                    <div style={{ }}>
+                    <div>
                       <img style={{ width: '150px', height: '150px'}}
                         alt=" 1년간 부담없이 거주하세요 도배해드립니다 부동산 직거래" 
                         src="https://dnvefa72aowie.cloudfront.net/realty/realty/articles/64c72dedbb25e018123c23a1fe2ed0597f6a4f7fd0e086fcd58d65e12818423b_1661987156388.jpeg?q=95&amp;s=1440x1440&amp;t=inside" 

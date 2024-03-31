@@ -23,21 +23,22 @@ import java.time.LocalDateTime;
 @Data
 public abstract class BaseColumn {
     @CreatedBy
-    @Column(updatable = false)
+    @Column(updatable = false, nullable = false)
     @Comment("등록자")
     private String createdby;   // 등록자
 
     @CreatedDate
-    @Column(updatable = false)
+    @Column(updatable = false, nullable = false)
     @Comment("등록일시")
     private LocalDateTime createdat;    // 등록일시
 
     @LastModifiedBy
-    @Column
+    @Column(nullable = false)
     @Comment("수정자")
     private String updatedby;   // 수정자
 
-    @Column
+    @LastModifiedDate
+    @Column(nullable = false)
     @Comment("수정일시")
     private LocalDateTime updatedat;    // 수정일시
 }

@@ -1,6 +1,7 @@
 package com.clone.danngnback.dto;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import org.hibernate.annotations.Comment;
 
@@ -13,10 +14,14 @@ import java.math.BigDecimal;
 public class UsrUser extends BaseColumn {
     @Id
     @Column(length = 10)
+    @Comment("사용자번호")
+    private String userNo;   // 사용자번호
+
+    @Column(length = 10, nullable = false)
     @Comment("사용자ID")
     private String userId;   // 사용자ID
 
-    @Column(length = 30)
+    @Column(length = 30, nullable = false)
     @Comment("사용자명")
     private String userNm;      // 사용자명
 

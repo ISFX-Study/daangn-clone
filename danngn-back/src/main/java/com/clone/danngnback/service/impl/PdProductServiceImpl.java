@@ -1,9 +1,7 @@
 package com.clone.danngnback.service.impl;
 
 import com.clone.danngnback.dto.PdProduct;
-import com.clone.danngnback.dto.Test;
 import com.clone.danngnback.repository.PdProductRepository;
-import com.clone.danngnback.repository.TestRepository;
 import com.clone.danngnback.service.PdProductService;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +16,8 @@ import java.util.List;
 public class PdProductServiceImpl implements PdProductService {
     private final PdProductRepository pdProductRepository;
 
+//    private final TestRepository pdProductRepository;
+
     public PdProductServiceImpl(PdProductRepository pdProductRepository) {
         this.pdProductRepository = pdProductRepository;
     }
@@ -26,4 +26,8 @@ public class PdProductServiceImpl implements PdProductService {
     public List<PdProduct> searchProductList() {
         return pdProductRepository.findAll();
     }
+
+//    public List<Test> searchProductList() {
+//        return pdProductRepository.findAll();
+//    }
 }

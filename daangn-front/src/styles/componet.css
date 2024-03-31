@@ -105,5 +105,15 @@
 .list-bottom-text {
     font-size: 1rem;
 }
+.list-bottom-text2 {
+    color: #868e96;
+    font-size: 13px;
+    margin-top: 0.7rem;
+}
+
+.list-img {
+    box-sizing: border-box;
+    border-radius: 12px;
+}
 
 /* list end */
