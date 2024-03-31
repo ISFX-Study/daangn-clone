@@ -17,6 +17,9 @@ import HouseList from './pages/houseList';  // 부동산직거래
 import CarList from './pages/carList';  // 중고차직거래
 import Sample from './pages/sample';
 
+/* 상수 import */
+import { API_URL } from './constants/API_URL';
+
 /**
  * 해당 함수가 react 컴포넌트라는 것을 타입스크립트로 설정
  */
@@ -25,12 +28,12 @@ const App: React.FC = () => {
     <BrowserRouter>
       <DaangnLayout>
         <Routes>
-          <Route path="/" element={<Home />}  />
-          <Route path="/productList" element={<ProductList />} />
-          <Route path="/companyList" element={<CompanyList />} />
-          <Route path="/partTimeList" element={<PartTimeList />} />
-          <Route path="/houseList" element={<HouseList />} />
-          <Route path="/carList" element={<CarList />} />
+          <Route path={API_URL.HOME} element={<Home />}  />
+          <Route path={API_URL.PRODUCT_LIST} element={<ProductList />} />
+          <Route path={API_URL.COMPANY_LIST} element={<CompanyList />} />
+          <Route path={API_URL.PART_TIME_LIST} element={<PartTimeList />} />
+          <Route path={API_URL.HOUSE_LIST} element={<HouseList />} />
+          <Route path={API_URL.CAR_LIST} element={<CarList />} />
           <Route path="/sample" element={<Sample />} />
         </Routes>
       </DaangnLayout>

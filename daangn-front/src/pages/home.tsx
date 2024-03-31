@@ -17,9 +17,8 @@ import { useNavigate } from 'react-router-dom';
 /* Ant Design 라이브러리에서 컴포넌트 import  */
 import { Flex, Button, Space, message } from 'antd';
 import { WechatFilled, NotificationFilled, QuestionCircleFilled, AppleFilled, AndroidFilled } from '@ant-design/icons';
-
-/* ts import */
-import commonUtils from '../utils/commonUtils';
+/* 상수 import */
+import { API_URL } from '../constants/API_URL';
 
 /* 컴포넌트를 정의. 함수 컴포넌트 형식으로 작성되었고, React.FC를 사용하여 컴포넌트의 타입을 지정 */
 const Home: React.FC = () => {
@@ -39,7 +38,7 @@ const Home: React.FC = () => {
    */
   const onClickProduct = () => {
     // 중고거래 화면으로 이동
-    navigate('/productList');
+    navigate(API_URL.PRODUCT_LIST);
   };
 
   /**
@@ -49,7 +48,7 @@ const Home: React.FC = () => {
    */
   const onClickPartTime = () => {
     // 알바 화면으로 이동
-    navigate('/partTimeList');
+    navigate(API_URL.PART_TIME_LIST);
   };
 
   /**
@@ -59,7 +58,7 @@ const Home: React.FC = () => {
    */
   const onClickCompany = () => {
     // 동네업체 화면으로 이동
-    navigate('/companyList');
+    navigate(API_URL.COMPANY_LIST);
   };
 
   /**

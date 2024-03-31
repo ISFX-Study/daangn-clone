@@ -1,6 +1,6 @@
 /**
- * 중고거래 목록 화면
- * @date 2024.03.17
+ * 중고거래 상세 화면
+ * @date 2024.03.31
  * @author pej
  * @description
  */
@@ -26,7 +26,7 @@ const ProductList: React.FC = () => {
   // 컴포넌트가 마운트될 때 한 번만 실행됨
   useEffect(() => {
     const fetchData = async () => {
-      const url = API_URL.PRODUCT_LIST_SEARCH;
+      const url = API_URL.PRODUCT_LIST;
       await axios.post(url)
         .then(response => { // 요청이 성공했을 때 실행되는 코드
           setData(response.data); // 받아온 데이터를 상태에 저장

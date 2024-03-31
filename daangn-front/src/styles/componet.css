@@ -97,6 +97,11 @@
     text-overflow: ellipsis; /* 넘치는 부분을 ...으로 대체 */
     width: 12rem;
 }
+.list-item-area {
+    text-align: left; 
+    margin-bottom: 20px; 
+    cursor: pointer;
+}
 .list-middle-text {
     font-size: 1.1rem;
     font-weight: 700;
