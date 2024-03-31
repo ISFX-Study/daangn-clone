@@ -22,6 +22,17 @@
 + react 18
 + Oracle 19c
 
+## :rabbit2: 폴더구조
++ assets : 이미지
++ componet : 공통 컴포넌트
++ constant : 상수
++ hook : hook 함수
++ layout : 레이아웃
++ store : 전역 상태
++ type : 각종 타입
++ util : 공통 js
++ pages : 화면
+
 ## :rabbit2:  마무리
 + 배운점
 + 아쉬운점
