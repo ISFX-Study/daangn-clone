@@ -14,25 +14,13 @@
 
 <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"><img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">
 
-<img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+<img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
 <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
 
 + SpringBoot 3.2.2
 + java 17
 + react 18
-+ MySQL 8.3.0
-
-## :rabbit2: 프로젝트 세부 일정
-+ 기능분석
-+ 설계
-+ 디자인
-+ 개발
-+ 테스트
-
-## :rabbit2:  구현기능
-+ 기능1
-  + 기능111111
-+ 기능2
++ Oracle 19c
 
 ## :rabbit2:  마무리
 + 배운점
