@@ -4,6 +4,7 @@
  * @author pej
  * @description
  */
+import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 /* antd 컴포넌트 import */
 import { Flex } from 'antd';
@@ -22,6 +23,8 @@ const ProductList: React.FC = () => {
   
   // 데이터를 저장할 상태
   const [data, setData] = useState<Product[] | null>(null); // 데이터를 저장할 상태
+
+  const navigate = useNavigate();
   
   // 컴포넌트가 마운트될 때 한 번만 실행됨
   useEffect(() => {
@@ -46,7 +49,7 @@ const ProductList: React.FC = () => {
    * @author pej
    */
   const onClickSell = () => {
-  
+    navigate(API_URL.ADD_PRODUCT);
   };
 
   /**

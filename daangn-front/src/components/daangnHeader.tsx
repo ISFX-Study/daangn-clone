@@ -7,6 +7,9 @@
 import { useNavigate } from 'react-router-dom';
 import { Flex, Layout, Menu } from 'antd';
 
+/* 상수 import */
+import { API_URL } from '../constants/API_URL';
+
 const { Header } = Layout;
 
 // 메뉴 변수
@@ -29,22 +32,22 @@ const DaangnHeader: React.FC = () => {
     const onClickMenu = (e:any) => {
         switch (Number(e.key)) {
             case 1: // 중고거래
-                navigate('/productList');
+                navigate(API_URL.PRODUCT_LIST);
                 break;
             case 2: // 동네업체
-                navigate('/companyList');
+                navigate(API_URL.COMPANY_LIST);
                 break;
             case 3: // 알바
-                navigate('/partTimeList');
+                navigate(API_URL.PART_TIME_LIST);
                 break;
             case 4: // 부동산 직거래
-                navigate('/houseList');
+                navigate(API_URL.HOUSE_LIST);
                 break;
             case 5: // 중고차 직거래
-                navigate('/carList');
+                navigate(API_URL.CAR_LIST);
                 break;
             default:
-                navigate('/');
+                navigate(API_URL.HOME);
         }
     };
 

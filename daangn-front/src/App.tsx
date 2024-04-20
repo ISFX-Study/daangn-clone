@@ -10,11 +10,15 @@ import DaangnLayout from './components/DaangnLayout';
 
 /* 페이지 불러오기 */
 import Home from './pages/home';
+
 import ProductList from './pages/productList';  // 중고거래
+import AddProduct from './pages/addProduct';
+
 import CompanyList from './pages/companyList';  // 동네업체
 import PartTimeList from './pages/partTimeList';  // 알바
 import HouseList from './pages/houseList';  // 부동산직거래
 import CarList from './pages/carList';  // 중고차직거래
+
 import Sample from './pages/sample';
 
 /* 상수 import */
@@ -29,7 +33,9 @@ const App: React.FC = () => {
       <DaangnLayout>
         <Routes>
           <Route path={API_URL.HOME} element={<Home />}  />
+          <Route path={API_URL.ADD_PRODUCT} element={<AddProduct />}  />
           <Route path={API_URL.PRODUCT_LIST} element={<ProductList />} />
+          <Route path={API_URL.PRODUCT_DETAIL} element={<ProductList />} />
           <Route path={API_URL.COMPANY_LIST} element={<CompanyList />} />
           <Route path={API_URL.PART_TIME_LIST} element={<PartTimeList />} />
           <Route path={API_URL.HOUSE_LIST} element={<HouseList />} />
