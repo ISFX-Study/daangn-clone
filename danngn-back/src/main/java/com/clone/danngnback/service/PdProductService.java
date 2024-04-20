@@ -11,4 +11,6 @@ import java.util.List;
  */
 public interface PdProductService {
     public List<PdProduct> searchProductList();
+
+    public void addProduct(PdProduct product);
 }
