@@ -23,6 +23,7 @@ import Sample from './pages/sample';
 
 /* 상수 import */
 import { API_URL } from './constants/API_URL';
+import ProductDetail from './pages/productDetail';
 
 /**
  * 해당 함수가 react 컴포넌트라는 것을 타입스크립트로 설정
@@ -35,7 +36,7 @@ const App: React.FC = () => {
           <Route path={API_URL.HOME} element={<Home />}  />
           <Route path={API_URL.ADD_PRODUCT} element={<AddProduct />}  />
           <Route path={API_URL.PRODUCT_LIST} element={<ProductList />} />
-          <Route path={API_URL.PRODUCT_DETAIL} element={<ProductList />} />
+          <Route path={API_URL.PRODUCT_DETAIL} element={<ProductDetail />} />
           <Route path={API_URL.COMPANY_LIST} element={<CompanyList />} />
           <Route path={API_URL.PART_TIME_LIST} element={<PartTimeList />} />
           <Route path={API_URL.HOUSE_LIST} element={<HouseList />} />

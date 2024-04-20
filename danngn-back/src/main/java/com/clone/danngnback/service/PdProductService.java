@@ -10,7 +10,9 @@ import java.util.List;
  * @date 2024-03-24
  */
 public interface PdProductService {
-    public List<PdProduct> searchProductList();
+    public List<PdProduct> searchProductList(PdProduct product);
+
+    public PdProduct searchProduct(PdProduct product);
 
     public void addProduct(PdProduct product);
 }

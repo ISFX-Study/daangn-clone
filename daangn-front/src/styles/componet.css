@@ -120,7 +120,50 @@
     box-sizing: border-box;
     border-radius: 12px;
 }
-
 /* list end */
 
+/* form start */
+.form-wrap {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    max-width: 48rem;
+    width: 100%;
+}
+.form-title {
+    text-align: left;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+}
+/* form start */
+
+/* detail start */
+.detail-wrap {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    max-width: 48rem;
+    width: 100%;
+}
+.detail-area {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.detail-user-area {
+    background-color: var(--background-color);
+    color: var(--gray-900);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1rem;
+}
+
+.detail-title {
+}
+.detail-content {
+    line-height: 1.36;
+    font-size: 1.2rem;
+    /* white-space: pre-wrap;
+    word-break: break-word; */
+}
+/* detail start */
 

@@ -21,10 +21,9 @@ import commonUtils from '../utils/commonUtils';
 const ProductList: React.FC = () => {
   // React.FC : React 함수 컴포넌트의 타입을 정의시 TypeScript에서 사용되는 타입
   
+  const navigate = useNavigate();
   // 데이터를 저장할 상태
   const [data, setData] = useState<Product[] | null>(null); // 데이터를 저장할 상태
-
-  const navigate = useNavigate();
   
   // 컴포넌트가 마운트될 때 한 번만 실행됨
   useEffect(() => {
@@ -49,6 +48,7 @@ const ProductList: React.FC = () => {
    * @author pej
    */
   const onClickSell = () => {
+    // 중고거래 등록 화면으로 이동
     navigate(API_URL.ADD_PRODUCT);
   };
 
@@ -58,7 +58,8 @@ const ProductList: React.FC = () => {
    * @author pej
    */
   const onClickItem = (item:Product) => {
-    
+    // 중고거래 상세 화면으로 이동
+    navigate(API_URL.PRODUCT_DETAIL, { state: { productCd: item.productCd } });
   };
 
   return (
@@ -95,10 +96,10 @@ const ProductList: React.FC = () => {
                             </div>
                             <div style={{ textAlign: 'left'}}>
                                 <div className='list-top-text'>{item.title}</div>
-                                <div className='list-middle-text'>{commonUtils.convertNumberComma(item.sellPrice)}</div>
+                                <div className='list-middle-text'>{commonUtils.convertNumberComma(item.sellPrice, {})}</div>
                                 <div className='list-bottom-text'>{item.tranHopeSpot}</div>
                                 <div className='list-bottom-text2'>
-                                  관심 {item.likeCnt ? commonUtils.convertNumberComma(item.likeCnt) : 0} | 채팅 {item.chatCnt ? commonUtils.convertNumberComma(item.chatCnt) : 0}
+                                  관심 {item.likeCnt ? commonUtils.convertNumberComma(item.likeCnt, {}) : 0} | 채팅 {item.chatCnt ? commonUtils.convertNumberComma(item.chatCnt, {}) : 0}
                                 </div>
                             </div>
                         </Flex>

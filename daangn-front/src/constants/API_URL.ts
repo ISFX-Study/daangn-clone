@@ -11,5 +11,6 @@ export enum API_URL {
     CAR_LIST = '/carList',             // 중고차직거래
 
     PRODUCT_LIST_SEARCH = '/api/prd/searchPrdouctList', // 중고거래 목록 조회
+    PRODUCT_SEARCH = '/api/prd/searchPrdouct', // 중고거래  조회
     PRODUCT_INSERT = '/api/prd/addProduct', // 중고거래 등록
 }

@@ -24,14 +24,31 @@ public class PdProductController {
      * @return List<PdProduct>
      */
     @PostMapping("/prd/searchPrdouctList")
-    public List<PdProduct> searchProductList() {
-        List<PdProduct> prdList = pdProductService.searchProductList();
+    public List<PdProduct> searchProductList(PdProduct product) {
+        List<PdProduct> prdList = pdProductService.searchProductList(product);
         return prdList;
     }
 
+    /**
+     * 중고거래 조회
+     * @date  2024.04.21
+     * @param
+     * @return PdProduct
+     */
+    @PostMapping("/prd/searchPrdouct")
+    public PdProduct searchProduct(PdProduct product) {
+        System.out.println("### product = "+ product.toString());
+        return pdProductService.searchProduct(product);
+    }
+
+    /**
+     * 중고거래 등록
+     * @date  2024.04.20
+     * @param product
+     * @return
+     */
     @PostMapping("/prd/addProduct")
     public void addProduct(PdProduct product) {
-        System.out.println("product =" + product.toString());
         pdProductService.addProduct(product);
     }
 }

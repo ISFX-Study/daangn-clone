@@ -6,7 +6,9 @@ import com.clone.danngnback.service.PdProductService;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * 중고거래 ServiceImpl
@@ -28,8 +30,19 @@ public class PdProductServiceImpl implements PdProductService {
      * @return List<PdProduct>
      */
     @Override
-    public List<PdProduct> searchProductList() {
+    public List<PdProduct> searchProductList(PdProduct product) {
         return pdProductRepository.findAll();
+    }
+
+    /**
+     * 중고거래 조회
+     * @date  2024.04.21
+     * @param  product
+     * @return product
+     */
+    @Override
+    public PdProduct searchProduct(PdProduct product) {
+        return pdProductRepository.findById(product.getProductCd()).orElse(null);
     }
 
     /**
