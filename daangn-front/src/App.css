@@ -15,6 +15,7 @@ body {
     --secondary-color: #FFE2D2;
     --black: #000000;
     --gray: #868B94;
+    --gray-900:#212124;
     --footer-bg-color : #f9fafb;
     --white: #FFFFFF;
     --test:#FF6F0F;
@@ -24,7 +25,7 @@ body {
     --background-color: #FFFFFF;
     --header-height: 64px;
 
-  
+    
     --footer-font-color: #868B94;
     --footer-title-font-size: 15px;
     --footer-default-font-size: 13px;

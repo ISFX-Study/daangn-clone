@@ -48,7 +48,10 @@ const DaangnLayout: React.FC<DaangnLayoutProps> = ({ children }) => {
               // itemHoverColor: 'var(--gray)',  // 마우스 오버시 메뉴 글자 색상
             },
             Button: {
-            }
+            },
+            Form: {
+              labelFontSize: 17
+            },
         },
       }}>
       <Layout>

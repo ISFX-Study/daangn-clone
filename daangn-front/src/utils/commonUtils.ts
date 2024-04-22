@@ -1,8 +1,8 @@
 /**
  * 공통 함수
  */
-// import { MESSAGE } from '/src/constants/MESSAGE';
-// import { API_URL } from '../constants/API_URL';
+import { MESSAGE } from '../constants/MESSAGE';
+
 const commonUtils = {
     
     /**
@@ -33,9 +33,27 @@ const commonUtils = {
             return num.toLocaleString();
         }
     }
-  
-    /*, getMessage(message:MESSAGE, replacement: string): string {
-        return MESSAGE[message].replace('{0}', replacement);
-    }*/
+    
+    /**
+     * 메세지 치환
+     * @param 메세지코드
+     * @param 치환될 문자열 
+     * @returns 메시지문구
+     */
+    , getMessage(msgCode:keyof typeof MESSAGE, args:any[]): string {
+        // 동적 속성 접근을 위해 : keyof typeof MESSAGE
+        let msg = MESSAGE[msgCode];
+        let msgName = '';
+
+        if (msg) {
+            // {숫자} 형태의 패턴을 찾아서 바꾸기
+            msgName = msg.replace(/\{\d+\}/g, (match) => {
+                const index = parseInt(match.slice(1, -1));
+                return args[index] !== undefined ? args[index] : match;
+            });
+        }
+        
+        return msgName;
+    }
 }
 export default commonUtils;

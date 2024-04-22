@@ -97,7 +97,7 @@ const AddProduct: React.FC = () => {
     const url = API_URL.PRODUCT_INSERT;
     axios.post(url, param)
       .then(response => { // 요청이 성공했을 때 실행되는 코드
-        alert(MESSAGE.MSG_0001);  // 저장이 왼료되었습니다.
+        alert(commonUtils.getMessage('MSG_0001', ['저장이']));
       })
       .catch(error => { // 요청이 실패했을 때 실행되는 코드
         console.error('오류 발생:', error);
